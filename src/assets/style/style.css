@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+.v-header h1 {
+    font-family: 'Montserrat-Bold';
+    padding-top: 50px;
+    font-size: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.v-navigation {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.v-navigation nav {
+    display: flex;
+    justify-content: center;
+}
+
+.v-navigation a {
+    width: 300px;
+    margin: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+
+.v-navigation a:hover {
+    color: rgb(35, 35, 35);
+    border: 1px solid rgb(35, 35, 35);
+    background: #fff;
+}
+
+.conversions-page {
+    padding-top: 50px;
+}
+
+.conversions-page-translate {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conversions-page__have, .conversions-page__need {
+    width: 300px;
+}
+
+.conversions-page__need-header, .conversions-page__have-header {
+    padding-bottom: 20px;
+}
+
+.conversions-page__need-input, .conversions-page__need-block {
+    width: 300px;
+    height: 100px;
+}
+
+.conversions-page__need-block {
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.conversions-page__have select, .conversions-page__need select {
+    text-align: center;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid black;
+}

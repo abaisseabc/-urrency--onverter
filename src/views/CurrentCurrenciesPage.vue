@@ -1,6 +1,6 @@
 <template>
     <div class="current-currencies-page">
-        <h1>Базовая валюта: 
+        <h1 class="current-currencies-page__header">Базовая валюта: 
             <select name="" id="">
                 <option
                     v-for="item in this.SELECTED_CURRENCY" 

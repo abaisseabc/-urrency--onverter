@@ -4,32 +4,37 @@
             <div class="conversions-page__have">
                 <p class="conversions-page__have-header">У меня есть</p>
                 <input class="conversions-page__need-input" v-model="haveAmount"/>
-                <p>Выберите валюту</p>
-                <select name="" id="" v-model="selectedCurrency">
-                    <option
-                        v-for="(item, key) in this.RATES" 
-                        :key="item.key"
-                        :value="key"
-                    >
-                    {{item.key}}
-                    </option>
-                </select>
+                <p>Выберите валюту:
+                    <select name="" id="" v-model="selectedCurrency">
+                        <option
+                            v-for="(item, key) in this.RATES" 
+                            :key="item.key"
+                            :value="key"
+                        >
+                        {{item.key}}
+                        </option>
+                    </select>
+                </p>
+                <p class="conversions-page__have-desc">
+                    Конвертер валют онлайн — инструмент, который позволит вам рассчитать соотношения актуальных курсов денежных средств всего мира на сегодня.
+                </p>
             </div>
             <div class="conversions-page__need">
                 <p class="conversions-page__need-header">Хочу приобрести</p>
                 <div class="conversions-page__need-block">
                     {{convertibleCurrencyCalculation}}
                 </div>
-                <p>Выберите валюту</p>
-                <select name="" id="" v-model="needSelectedCurrency">
-                    <option 
-                        v-for="(item, key) in this.RATES" 
-                        :key="item.key"
-                        :value="key"
-                    >
-                    {{item.key}}
-                    </option>
-                </select>
+                <p>Выберите валюту: 
+                    <select name="" id="" v-model="needSelectedCurrency">
+                        <option 
+                            v-for="(item, key) in this.RATES" 
+                            :key="item.key"
+                            :value="key"
+                        >
+                        {{item.key}}
+                        </option>
+                    </select>
+                </p>
             </div>
         </div>
     </div>
@@ -68,7 +73,7 @@ import { mapActions, mapGetters } from 'vuex';
                 if ( isNaN(this.haveAmount * (1 / valueSelectedCurrency * valueNeedSelectedCurrency)) ) {
                     return ""
                 } else {
-                    return this.haveAmount * (1 / valueSelectedCurrency * valueNeedSelectedCurrency)
+                    return (this.haveAmount * (1 / valueSelectedCurrency * valueNeedSelectedCurrency)).toFixed(2)
                 }
             }
         },

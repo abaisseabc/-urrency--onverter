@@ -5,9 +5,9 @@
                 <p class="conversions-page__have-header">У меня есть</p>
                 <input class="conversions-page__need-input" v-model="haveAmount"/>
                 <p>Выберите валюту:
-                    <select name="" id="" v-model="selectedCurrency">
+                    <select name="" id="" v-model="selectedCurrency" >
                         <option
-                            v-for="(item, key) in this.RATES" 
+                            v-for="(item, key) in this.RATES"
                             :key="item.key"
                             :value="key"
                         >
@@ -15,9 +15,7 @@
                         </option>
                     </select>
                 </p>
-                <p class="conversions-page__have-desc">
-                    Конвертер валют онлайн — инструмент, который позволит вам рассчитать соотношения актуальных курсов денежных средств всего мира на сегодня.
-                </p>
+                <vDescriptionVue />
             </div>
             <div class="conversions-page__need">
                 <p class="conversions-page__need-header">Хочу приобрести</p>
@@ -42,8 +40,12 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import vDescriptionVue from '@/components/v-description.vue';
 
     export default {
+        components: {
+            vDescriptionVue
+        },
         data() {
             return {
                 haveAmount: '1',

@@ -18,7 +18,7 @@
                 <vDescriptionVue />
             </div>
             <div class="conversions-page__need">
-                <p class="conversions-page__need-header">Хочу приобрести</p>
+                <p class="conversions-page__need-header">Я получу</p>
                 <div class="conversions-page__need-block">
                     {{convertibleCurrencyCalculation}}
                 </div>

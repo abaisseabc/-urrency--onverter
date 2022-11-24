@@ -12,12 +12,14 @@
                 </option>
             </select>
         </h1>
-        <div 
-            class="current-currencies-page__result" 
-            v-for="item in this.SELECTED_CURRENCY" 
-            :key="item.key"
-        >
-        <p>1 {{selectedCurrency}} = {{item.value}} {{item.key}}</p>
+        <div class="current-currencies-page__result" >
+            <div
+                v-for="item in this.SELECTED_CURRENCY" 
+                :key="item.key"
+                class="current-currencies-page__result-block"
+            >
+                <p>1 {{selectedCurrency}} = {{item.value}} {{item.key}}</p>
+            </div>
         </div>
     </div>
 </template>

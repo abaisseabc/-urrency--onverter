@@ -1,14 +1,12 @@
 <template>
   <div id="app">
     <div class="container">
-      <!-- <vHeaderVue /> -->
       <vNavigationVue />
     </div>
   </div>
 </template>
 
 <script>
-// import vHeaderVue from './components/v-header.vue';
 import vNavigationVue from './components/v-navigation.vue';
 
 export default {
